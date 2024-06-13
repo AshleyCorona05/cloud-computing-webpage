@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómputo en la Nube</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Cómputo en la Nube</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#conceptos">Conceptos Generales</a></li>
+            <li><a href="#servicios">Tipos de Servicios</a></li>
+            <li><a href="#patrones">Patrones de Diseño</a></li>
+            <li><a href="#estandares">Estándares en Servicios</a></li>
+            <li><a href="#plataformas">Plataformas Tecnológicas</a></li>
+            <li><a href="#seguridad">Seguridad e Interoperabilidad</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="conceptos">
+            <h2>Conceptos Generales</h2>
+            <p>El cómputo en la nube es un modelo de prestación de servicios informáticos...</p>
+        </section>
+        <section id="servicios">
+            <h2>Tipos de Servicios en la Nube</h2>
+            <p><strong>IaaS:</strong> Infraestructura como Servicio...</p>
+            <p><strong>PaaS:</strong> Plataforma como Servicio...</p>
+            <p><strong>SaaS:</strong> Software como Servicio...</p>
+        </section>
+        <section id="patrones">
+            <h2>Patrones de Diseño</h2>
+            <p>El patrón de microservicios divide una aplicación en un conjunto de servicios pequeños...</p>
+        </section>
+        <section id="estandares">
+            <h2>Estándares en Servicios</h2>
+            <p>Los estándares y mejores prácticas incluyen ISO/IEC 27001, NIST SP 800-145...</p>
+        </section>
+        <section id="plataformas">
+            <h2>Plataformas Tecnológicas</h2>
+            <p><strong>AWS:</strong> Amazon Web Services...</p>
+            <p><strong>Azure:</strong> Microsoft Azure...</p>
+            <p><strong>GCP:</strong> Google Cloud Platform...</p>
+        </section>
+        <section id="seguridad">
+            <h2>Seguridad e Interoperabilidad</h2>
+            <p>Los principales desafíos de seguridad incluyen el acceso no autorizado...</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 - Cómputo en la Nube</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav {
+    background: #444;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 1rem;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+footer p {
+    margin: 0;
+}
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll("nav ul li a");
+    const sections = document.querySelectorAll("section");
+
+    links.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            sections.forEach(section => {
+                if (section.getAttribute("id") === targetId) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                }
+            });
+        });
+    });
+});
